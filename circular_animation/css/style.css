@@ -1,0 +1,46 @@
+@charset "UTF-8";
+@import url(./fonts.css);
+@import url(./reset.css);
+
+#wrap {width:100%;} 
+#wrap #svgBox {width:100%;padding:130px 0;} 
+#wrap #svgBox .container {width:100%;max-width:1170px;margin:0 auto;} 
+#wrap #svgBox .container .gap {width:100%;} 
+#wrap #svgBox .container .gap .wrap {width:100%;} 
+#wrap #svgBox .container .gap .wrap .title {width:100%;text-align: center;padding:0 0 50px 0;} 
+#wrap #svgBox .container .gap .wrap .title h2 {font-size:40px;font-weight:600;} 
+
+#wrap #svgBox .container .gap .wrap .content {width:100%;} 
+#wrap #svgBox .container .gap .wrap .content ul {width:100%;display:flex;} 
+#wrap #svgBox .container .gap .wrap .content ul li {width:25%;} 
+#wrap #svgBox .container .gap .wrap .content ul li .col-gap {margin:0 15px;} 
+#wrap #svgBox .container .gap .wrap .content ul li .col-gap .svg-wrap {width:100%;position: relative;}
+
+/* 애니메이션 설정 */
+#wrap #svgBox .container .gap .wrap .content ul li .col-gap .svg-wrap svg {position: relative;z-index:1;transform:rotate(-90deg);}
+
+#wrap #svgBox .container .gap .wrap .content ul li .col-gap .svg-wrap svg .circle1 {stroke-dasharray:942;stroke-dashoffset:188.4;animation: ani1 3s forwards ease-in-out;} /* 80% */
+#wrap #svgBox .container .gap .wrap .content ul li .col-gap .svg-wrap svg .circle2 {stroke-dasharray:942;stroke-dashoffset:235.5;animation: ani2 3s forwards ease-in-out;} /* 75% */
+#wrap #svgBox .container .gap .wrap .content ul li .col-gap .svg-wrap svg .circle3 {stroke-dasharray:942;stroke-dashoffset:94.2; animation: ani3 3s forwards ease-in-out;}  /* 90% */
+#wrap #svgBox .container .gap .wrap .content ul li .col-gap .svg-wrap svg .circle4 {stroke-dasharray:942;stroke-dashoffset:141.3;animation: ani4 3s forwards ease-in-out;} /* 85% */
+
+/* 애니메이션 구현  */
+@keyframes ani1 {
+      0% {stroke-dashoffset:942;}        
+    100% {stroke-dashoffset:188.4;}
+}
+@keyframes ani2 {
+      0% {stroke-dashoffset:942;}        
+    100% {stroke-dashoffset:235.5;}
+}
+@keyframes ani3 {
+      0% {stroke-dashoffset:942;}        
+    100% {stroke-dashoffset:94.2;}
+}
+@keyframes ani4 {
+      0% {stroke-dashoffset:942;}        
+    100% {stroke-dashoffset:141.3;}
+}
+
+/* 카운트 백분율 수치 */
+#wrap #svgBox .container .gap .wrap .content ul li .col-gap .svg-wrap span {position: absolute;top:0;left:0;z-index:2;font-size:36px;width:100%;height:100%;display: flex;justify-content: center;align-items: center;}
